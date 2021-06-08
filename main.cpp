@@ -15,25 +15,31 @@ int main()
     int totalCost{0};
     double totalTax{0};
 
-    cout << "How many small rooms do you need cleaned?" << std::endl;
+    cout << "How many small rooms do you need cleaned?" << endl;
     cin >> smallRoomNum;
 
-    cout << "How many large rooms do you need cleaned?" << std::endl;
+    cout << "How many large rooms do you need cleaned?" << endl;
     cin >> largeRoomNum;
 
-    cout << "Estimate for carpet cleaning service" << std::endl;
-    cout << "Number of small rooms: " << smallRoomNum << "\nNumber of large rooms: " << largeRoomNum << std::endl;
-    cout << "Price per small room: $" << smallRoomPrice << "\nPrice per large room: $" << largeRoomPrice << std::endl;
+    cout << "Estimate for carpet cleaning service" << endl;
+
+    cout << "Number of small rooms: " << smallRoomNum
+         << "\nNumber of large rooms: " << largeRoomNum << endl;
+    cout << "Price per small room: $" << smallRoomPrice
+         << "\nPrice per large room: $" << largeRoomPrice << endl;
 
     totalCost += (smallRoomNum * smallRoomPrice) + (largeRoomNum * largeRoomPrice);
     totalTax += salesTax * totalCost;
 
-    cout << "Cost: $" << totalCost << "\nTax: $" << totalTax << std::endl;
-    cout << "=============================================================" << std::endl;
+    cout << "Cost: $" << totalCost
+         << "\nTax: $" << totalTax << endl;
+
+    cout << "=============================================================" << endl;
 
     totalCost = totalCost + totalTax;
 
-    cout << "Total estimate: $" << totalCost << "\nThis estimate is valid for " << validDays << " days." << std::endl;
+    cout << "Total estimate: $" << totalCost
+         << "\nThis estimate is valid for " << validDays << " days." << endl;
 
     return 0;
 }
